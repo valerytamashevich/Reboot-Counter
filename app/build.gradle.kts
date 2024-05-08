@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -46,6 +48,26 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // RxJava
+    implementation(libs.rxjava)
+    // RxAndroid
+    implementation(libs.rxandroid)
+    // Retrofit adapter for RxJava 2
+    implementation (libs.retrofit2.adapter.rxjava2)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.reactivestreams.ktx)
+
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.rxjava2)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
 }
