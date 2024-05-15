@@ -9,7 +9,7 @@ class AlarmScheduler {
 
     fun scheduleRepeatingAlarm(context: Context) {
         val alarmIntent = Intent(context, AlarmReceiver::class.java)
-        val pendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+        val pendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_IMMUTABLE)
 
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val interval = AlarmManager.INTERVAL_FIFTEEN_MINUTES

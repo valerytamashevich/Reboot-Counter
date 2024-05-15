@@ -37,7 +37,7 @@ class NotificationHelper(private val context: Context) {
         dismissIntent.putExtra(DISMISS_NOTIFICATION_ID, NOTIFICATION_ID)
 
         val dismissPendingIntent =
-            PendingIntent.getBroadcast(context, 0, dismissIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+            PendingIntent.getBroadcast(context, 0, dismissIntent, PendingIntent.FLAG_IMMUTABLE)
 
         val notificationBuilder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
