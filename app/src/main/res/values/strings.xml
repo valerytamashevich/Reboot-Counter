@@ -5,4 +5,6 @@
     <string name="notification_permission_text">Let the app show a permission about the reboot information</string>
     <string name="permission_available">Permission available</string>
     <string name="permission_denied">Permission denied</string>
+    <string name="no_items_reboot_message">No boots detected</string>
+    <string name="reboot_info_item_text">*%s - %d</string>
 </resources>

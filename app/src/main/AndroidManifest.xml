@@ -18,7 +18,7 @@
         android:theme="@style/Theme.Main"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".RebootListActivity"
             android:exported="true"
             android:theme="@style/Theme.Main">
             <intent-filter>
