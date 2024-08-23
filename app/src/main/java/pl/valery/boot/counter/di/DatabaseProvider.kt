@@ -7,11 +7,11 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import pl.valery.boot.counter.data.AppDatabase
-import pl.valery.boot.counter.data.RebootEventDao
+import pl.valery.boot.counter.dao.AppDatabase
+import pl.valery.boot.counter.dao.RebootEventDao
 import pl.valery.boot.counter.notification.NotificationMessageHelper
-import pl.valery.counter.repository.IRebootEventRepository
-import pl.valery.counter.repository.RebootEventRepository
+import pl.valery.boot.counter.repository.IRebootEventRepository
+import pl.valery.boot.counter.repository.RebootEventRepository
 
 @Module
 @InstallIn(SingletonComponent::class)

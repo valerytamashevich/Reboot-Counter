@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import pl.valery.boot.counter.R
-import pl.valery.counter.dao.model.RebootDayCount
+import pl.valery.boot.counter.dao.model.RebootDayCount
 
 // Adapter class
 class RebootInfoAdapter(

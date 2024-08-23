@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import dagger.hilt.android.AndroidEntryPoint
-import pl.valery.boot.counter.data.AppDatabase
+import pl.valery.boot.counter.dao.AppDatabase
 import javax.inject.Inject
 
 @AndroidEntryPoint

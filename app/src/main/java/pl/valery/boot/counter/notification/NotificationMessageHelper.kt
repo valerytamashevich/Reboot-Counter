@@ -3,8 +3,8 @@ package pl.valery.boot.counter.notification
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import pl.valery.counter.dao.model.RebootEvent
-import pl.valery.counter.repository.IRebootEventRepository
+import pl.valery.boot.counter.dao.model.RebootEvent
+import pl.valery.boot.counter.repository.IRebootEventRepository
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

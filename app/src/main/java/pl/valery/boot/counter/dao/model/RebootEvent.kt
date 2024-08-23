@@ -1,4 +1,4 @@
-package pl.valery.counter.dao.model
+package pl.valery.boot.counter.dao.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

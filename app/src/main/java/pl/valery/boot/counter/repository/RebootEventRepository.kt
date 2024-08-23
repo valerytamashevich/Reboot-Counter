@@ -1,11 +1,11 @@
-package pl.valery.counter.repository
+package pl.valery.boot.counter.repository
 
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Observable
-import pl.valery.boot.counter.data.RebootEventDao
-import pl.valery.counter.dao.model.RebootDayCount
-import pl.valery.counter.dao.model.RebootEvent
+import pl.valery.boot.counter.dao.RebootEventDao
+import pl.valery.boot.counter.dao.model.RebootDayCount
+import pl.valery.boot.counter.dao.model.RebootEvent
 import javax.inject.Inject
 
 interface IRebootEventRepository {

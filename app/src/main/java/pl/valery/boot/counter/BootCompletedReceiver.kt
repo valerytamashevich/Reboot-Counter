@@ -6,8 +6,8 @@ import android.content.Intent
 import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import pl.valery.counter.dao.model.RebootEvent
-import pl.valery.counter.repository.IRebootEventRepository
+import pl.valery.boot.counter.dao.model.RebootEvent
+import pl.valery.boot.counter.repository.IRebootEventRepository
 import javax.inject.Inject
 
 @AndroidEntryPoint

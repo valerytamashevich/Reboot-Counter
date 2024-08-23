@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.Flowable
 import io.reactivex.schedulers.Schedulers
-import pl.valery.counter.dao.model.RebootDayCount
-import pl.valery.counter.repository.IRebootEventRepository
+import pl.valery.boot.counter.dao.model.RebootDayCount
+import pl.valery.boot.counter.repository.IRebootEventRepository
 import javax.inject.Inject
 
 @HiltViewModel
