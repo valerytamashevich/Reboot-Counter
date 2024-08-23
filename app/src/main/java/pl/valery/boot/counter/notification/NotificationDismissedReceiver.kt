@@ -17,7 +17,7 @@ class NotificationDismissedReceiver : BroadcastReceiver() {
         val notificationId = intent.extras!!.getInt(NotificationHelper.DISMISS_NOTIFICATION_ID)
 
         if (notificationId == 123) {
-            val notificationDatabase = appDatabase.notificationDismissDao()
+            appDatabase.notificationDismissDao()
             // todo add notification show time changing
         }
     }

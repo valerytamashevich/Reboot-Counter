@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RebootViewModel @Inject constructor(
-    private val repository: IRebootEventRepository,
+    repository: IRebootEventRepository,
 ) : ViewModel() {
 
     val rebootInfo: Flowable<List<RebootDayCount>> = repository
