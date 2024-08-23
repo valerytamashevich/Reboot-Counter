@@ -3,36 +3,36 @@ package pl.valery.boot.counter
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.util.Log
-import android.widget.Toast
 import dagger.hilt.android.AndroidEntryPoint
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import pl.valery.boot.counter.data.AppDatabase
-import pl.valery.boot.counter.data.RebootEvent
+import pl.valery.counter.dao.model.RebootEvent
+import pl.valery.counter.repository.IRebootEventRepository
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class BootCompletedReceiver : BroadcastReceiver() {
 
+    private val compositeDisposable = CompositeDisposable()
+
     @Inject
-    lateinit var database: AppDatabase
+    lateinit var repository: IRebootEventRepository
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        if (intent!!.action == Intent.ACTION_BOOT_COMPLETED) {
-
-            val timestamp = System.currentTimeMillis()
-            val rebootEvent = RebootEvent(timestamp = timestamp)
+        if (intent != null && intent.action == Intent.ACTION_BOOT_COMPLETED) {
+            val rebootEvent = RebootEvent(timestamp = System.currentTimeMillis())
 
             context?.let {
-                val rebootEventDao = database.rebootEventDao()
-                rebootEventDao.placeRebootEvent(rebootEvent)
-                    .subscribeOn(Schedulers.io())
-                    .subscribe({
-                        // Successfully saved the reboot event
-                    }, { error ->
-                        // Handle potential errors
-                        error.printStackTrace()
-                    })
+                compositeDisposable.add(
+                    repository.placeRebootEvent(rebootEvent)
+                        .subscribeOn(Schedulers.io())
+                        .subscribe({
+                            // Successfully saved the reboot event
+                        }, { error ->
+                            // Handle potential errors
+                            error.printStackTrace()
+                        })
+                )
             }
         }
     }
