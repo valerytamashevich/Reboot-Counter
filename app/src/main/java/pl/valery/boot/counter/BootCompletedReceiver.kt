@@ -1,4 +1,4 @@
-package pl.valery.myapplication
+package pl.valery.boot.counter
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -7,8 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import dagger.hilt.android.AndroidEntryPoint
 import io.reactivex.schedulers.Schedulers
-import pl.valery.myapplication.data.AppDatabase
-import pl.valery.myapplication.data.RebootEvent
+import pl.valery.boot.counter.data.AppDatabase
+import pl.valery.boot.counter.data.RebootEvent
 import javax.inject.Inject
 
 @AndroidEntryPoint

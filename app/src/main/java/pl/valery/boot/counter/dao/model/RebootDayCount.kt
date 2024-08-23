@@ -1,4 +1,4 @@
-package pl.valery.myapplication.data
+package pl.valery.counter.dao.model
 
 data class RebootDayCount(
     val date: String,

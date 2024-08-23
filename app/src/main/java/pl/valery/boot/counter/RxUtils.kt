@@ -1,4 +1,4 @@
-package pl.valery.myapplication
+package pl.valery.boot.counter
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer

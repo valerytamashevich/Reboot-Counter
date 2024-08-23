@@ -1,4 +1,4 @@
-package pl.valery.myapplication.notification
+package pl.valery.boot.counter.notification
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -63,7 +63,7 @@ class NotificationHelper(private val context: Context) {
         private const val NOTIFICATION_ID = 123
         private const val CHANNEL_ID = "reboot_event_channel"
 
-        const val DISMISS_NOTIFICATION_ID = "pl.valery.myapplication.notificationId"
+        const val DISMISS_NOTIFICATION_ID = "pl.valery.boot.counter.notificationId"
 
     }
 }

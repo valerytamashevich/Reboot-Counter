@@ -1,8 +1,8 @@
-package pl.valery.myapplication
+package pl.valery.boot.counter
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class MyApplication : Application() {
+class BootCounterApplication : Application() {
 }

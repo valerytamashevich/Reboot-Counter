@@ -1,12 +1,13 @@
-package pl.valery.myapplication
+package pl.valery.boot.counter
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
-import pl.valery.myapplication.alarm.AlarmScheduler
-import pl.valery.myapplication.notification.NotificationMessageHelper
+import pl.valery.boot.counter.alarm.AlarmScheduler
+import pl.valery.boot.counter.notification.NotificationMessageHelper
+import pl.valery.counter.viewmodel.RebootViewModel
 import javax.inject.Inject
 
 @AndroidEntryPoint

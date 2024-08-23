@@ -1,21 +1,21 @@
-package pl.valery.myapplication.notification
+package pl.valery.boot.counter.notification
 
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import pl.valery.myapplication.data.AppDatabase
-import pl.valery.myapplication.data.RebootEvent
+import pl.valery.counter.dao.model.RebootEvent
+import pl.valery.counter.repository.IRebootEventRepository
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
 
 class NotificationMessageHelper @Inject constructor(
-    private val database: AppDatabase,
+    private val repository: IRebootEventRepository,
 ) {
 
     fun getNotificationMessage(): Observable<String> {
-        return database.rebootEventDao().getAllRebootEvents()
+        return repository.allRebootEvents
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .map { events ->

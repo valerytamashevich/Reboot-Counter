@@ -1,4 +1,4 @@
-package pl.valery.myapplication.notification
+package pl.valery.boot.counter.notification
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

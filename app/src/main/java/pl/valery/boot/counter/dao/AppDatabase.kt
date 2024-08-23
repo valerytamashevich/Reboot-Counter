@@ -1,9 +1,10 @@
-package pl.valery.myapplication.data
+package pl.valery.boot.counter.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import pl.valery.myapplication.notification.NotificationDao
-import pl.valery.myapplication.notification.NotificationDismissEvent
+import pl.valery.boot.counter.notification.NotificationDao
+import pl.valery.boot.counter.notification.NotificationDismissEvent
+import pl.valery.counter.dao.model.RebootEvent
 
 @Database(entities = [RebootEvent::class, NotificationDismissEvent::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {

@@ -1,4 +1,4 @@
-package pl.valery.myapplication.data
+package pl.valery.boot.counter.data
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -7,6 +7,8 @@ import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Observable
 import io.reactivex.Single
+import pl.valery.counter.dao.model.RebootDayCount
+import pl.valery.counter.dao.model.RebootEvent
 
 @Dao
 interface RebootEventDao {

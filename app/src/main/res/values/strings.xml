@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Boot counter</string>
 
     <string name="data_and_count_reboot_pattern">%s - %d</string>
     <string name="notification_permission_text">Let the app show a permission about the reboot information</string>

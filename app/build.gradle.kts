@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "pl.valery.myapplication"
+    namespace = "pl.valery.boot.counter"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "pl.valery.myapplication"
+        applicationId = "pl.valery.boot.counter"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

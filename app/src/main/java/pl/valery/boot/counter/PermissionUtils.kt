@@ -1,4 +1,4 @@
-package pl.valery.myapplication
+package pl.valery.boot.counter
 
 import android.Manifest
 import android.content.Context

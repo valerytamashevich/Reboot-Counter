@@ -1,11 +1,11 @@
-package pl.valery.myapplication.alarm
+package pl.valery.boot.counter.alarm
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import dagger.hilt.android.AndroidEntryPoint
-import pl.valery.myapplication.notification.NotificationHelper
-import pl.valery.myapplication.notification.NotificationMessageHelper
+import pl.valery.boot.counter.notification.NotificationHelper
+import pl.valery.boot.counter.notification.NotificationMessageHelper
 import javax.inject.Inject
 
 
